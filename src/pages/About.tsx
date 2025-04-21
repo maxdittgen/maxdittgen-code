@@ -65,7 +65,7 @@ const About: React.FC = () => {
               className="w-full h-[604px] rounded-xl object-cover"
             />
             {/* Gray overlay */}
-            <div className="absolute inset-0 bg-gray-500 bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+            <div className="absolute inset-0 bg-gray-500 flex items-center justify-center opacity-0 group-hover:opacity-80 transition-opacity rounded-xl" />
             {/* Caption */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
               <p className="leading-relaxed text-white text-opacity-100 text-center px-4">
