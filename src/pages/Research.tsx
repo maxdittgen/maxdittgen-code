@@ -16,7 +16,7 @@ interface ResearchItem {
 // =======================
 const researchExperiences: ResearchItem[] = [
   {
-    thumbnail: 'src/assets/research-thumbnails/utech.png',
+    thumbnail: 'src/assets/utech.png',
     title: 'Urban Technology Lab (uTECH) - Cornell University',
     subtitle: 'Jan 2025 – Present',
     details: 'Pollution exposure aware path‑planning algorithm development for navigation apps',
@@ -24,7 +24,7 @@ const researchExperiences: ResearchItem[] = [
     moreInfoLink: 'https://drive.google.com/file/d/1jnp2VC_STcm6XjZ8A3j0COlxFfMmwIXj/view?usp=sharing'
   },
   {
-    thumbnail: 'src/assets/research-thumbnails/comment.png',
+    thumbnail: 'src/assets/comment.png',
     title: 'Computing for Global Development Lab - Cornell University',
     subtitle: 'Jan 2024 – Dec 2024',
     details: 'UI development for collaborative Human‑AI tool for writing constructive Reddit comments',
@@ -32,7 +32,7 @@ const researchExperiences: ResearchItem[] = [
     moreInfoLink: 'https://arxiv.org/pdf/2411.03295'
   },
   {
-    thumbnail: 'src/assets/research-thumbnails/microfaas.png',
+    thumbnail: 'src/assets/microfaas.png',
     title: 'Performance‑and‑Energy Aware Computing Lab (PeacLab) - Boston University',
     subtitle: 'Summer 2023',
     details: 'Linux Kernel testing for efficient and scalable cloud solution built on bare‑metal microcontroller clusters',
@@ -40,7 +40,7 @@ const researchExperiences: ResearchItem[] = [
     moreInfoLink: 'https://www.bu.edu/peaclab/files/2022/02/MicroFaaS-DATE22.pdf'
   },
   {
-    thumbnail: 'src/assets/research-thumbnails/troyanskaya.jpg',
+    thumbnail: 'src/assets/troyanskaya.jpg',
     title: 'Troyanskaya Lab - Princeton University',
     subtitle: 'Jan 2021 – May 2021',
     details: 'Computational gene expression analysis for determining developmental diseases modelable by synthetic brain organoids',
