@@ -23,7 +23,7 @@ const projects: Project[] = [
     description: 'Sustainable Investment Analytics API to search, analyze, and summarize ESG reports for eco‑conscious traders',
     image: ForetImg,
     githubLink: '#',
-    secondaryLink: '#',
+    secondaryLink: 'https://devpost.com/software/foret',
     secondaryLinkType: 'devpost'
   },
   {
@@ -31,8 +31,8 @@ const projects: Project[] = [
     subtitle: 'Stanford Treehacks 2024',
     description: 'AI‑enabled search engine for automatic search refinement suggestions and result summarization. Similar to what is now Perplexity.',
     image: RondoImg,
-    githubLink: '#',
-    secondaryLink: '#',
+    githubLink: 'https://github.com/ericz23/Rondo-SearchEngine',
+    secondaryLink: 'https://github.com/jmccormick7/ESGFactChecker',
     secondaryLinkType: 'devpost'
   },
   {
@@ -40,8 +40,8 @@ const projects: Project[] = [
     subtitle: '2024 Summer Olympics in Paris',
     description: 'Demand forecasting, transit queueing model, and metro scheduling analytics for the 2024 Summer Olympics in Paris',
     image: ForecastImg,
-    githubLink: '#',
-    secondaryLink: '#',
+    githubLink: 'https://github.com/maxdittgen/OlympicsMetroQueueModel',
+    secondaryLink: 'https://drive.google.com/file/d/1TrKL0aSMhz5p3Er2QgrJixWAM4CzL-dD/view?usp=sharing',
     secondaryLinkType: 'presentation'
   },
   {
@@ -49,8 +49,8 @@ const projects: Project[] = [
     subtitle: 'Ad-hoc search engine for finding study abroad programs',
     description: 'Built from scratch using WikiTravel city data, EducationAbroad university data, similarity algorithms, and text‑mining components.',
     image: AbroadImg,
-    githubLink: '#',
-    secondaryLink: '#',
+    githubLink: 'https://github.com/solankyp/4300-Flask-Template-JSON/tree/master',
+    secondaryLink: 'https://drive.google.com/file/d/1FaVjmEXV_Ub2uBIjx6wFVk2cUXURBNIT/view?usp=sharing',
     secondaryLinkType: 'presentation'
   },
 ]
@@ -172,8 +172,8 @@ const Projects: React.FC = () => {
         {/* Arrow to next section */}
         {showArrow && (
           <a
-            href="#links"
-            aria-label="Scroll to Links"
+            href="#experience"
+            aria-label="Scroll to Experience"
             className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
           >
             <img src={ArrowDown} alt="Scroll down" className="w-8 h-10 animate-bounce" />

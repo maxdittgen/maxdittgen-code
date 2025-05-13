@@ -18,9 +18,9 @@ function App() {
   const sections = [
     { id: 'hero',        component: <Hero /> },
     { id: 'about',       component: <About /> },
-    { id: 'experience', component: <Experience /> },
     { id: 'research',   component: <Research /> },
     { id: 'projects',   component: <Projects /> },
+    { id: 'experience', component: <Experience /> },
     { id: 'links',      component: <Links /> },
   ];
 

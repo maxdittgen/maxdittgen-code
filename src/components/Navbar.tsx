@@ -32,14 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
         </li>
         <li>
             <a
-            href="#experience"
-            className={`nav-link ${active === 'experience' ? 'font-bold' : 'font-normal'}`}
-            >
-            Experience
-            </a>
-        </li>
-        <li>
-            <a
             href="#research"
             className={`nav-link ${active === 'research' ? 'font-bold' : 'font-normal'}`}
             >
@@ -52,6 +44,14 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
             className={`nav-link ${active === 'projects' ? 'font-bold' : 'font-normal'}`}
             >
             Projects
+            </a>
+        </li>
+        <li>
+            <a
+            href="#experience"
+            className={`nav-link ${active === 'experience' ? 'font-bold' : 'font-normal'}`}
+            >
+            Experience
             </a>
         </li>
         <li>

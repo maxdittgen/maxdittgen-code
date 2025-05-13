@@ -58,12 +58,13 @@ const Experience: React.FC = () => (
   >
     {/* Centered container */}
     <div className="mx-auto px-8 max-w-5xl w-full h-[calc(100vh-14rem)] relative">
+      <h2 className="text-2xl font-bold mb-2 ml-7">Places I've worked</h2>
       {/* Scrollable list with padding for hover effects */}
       <ul className="overflow-y-auto h-full pr-8 pb-16 space-y-4 pt-4 pl-4">
         {experiences.map((exp, i) => (
           <li
             key={i}
-            className="flex bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-md transform-gpu"
+            className="flex bg-white overflow-hidden transition-all duration-300 hover:scale-[1.05] transform-gpu"
           >
             {/* Logo - larger with minimal margin */}
             <div className="flex-shrink-0 p-2 flex items-center">
@@ -92,8 +93,8 @@ const Experience: React.FC = () => (
 
     {/* Arrow positioned halfway between content and footer */}
     <a
-      href="#research"
-      aria-label="Scroll to Research"
+      href="#links"
+      aria-label="Scroll to Link"
       className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
     >
       <img
