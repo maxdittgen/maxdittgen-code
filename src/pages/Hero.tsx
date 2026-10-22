@@ -52,6 +52,28 @@ const Hero: React.FC = () => {
             I'm a recent Cornell University B.S. and M.Eng. graduate excited about
             the confluence of technology, development and cultures.
           </p>
+          <a
+            href="/docs/Maximilian_Dittgen_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-1 text-lg text-gray-500 border-b border-dotted border-gray-400 transition-transform duration-200 hover:scale-110"
+          >
+            CV
+            {/* Curved upward arrow */}
+            <svg
+              viewBox="0 0 16 16"
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M2 13c5 0 9-2.5 9-10" />
+              <path d="M7.5 6.5 11 3l3.5 3.5" />
+            </svg>
+          </a>
         </div>
       </div>
 
