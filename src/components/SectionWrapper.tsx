@@ -28,7 +28,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
     <section
       id={id}
       ref={ref}
-      className="snap-start flex items-center justify-center min-h-screen px-8"
+      className="snap-start flex items-center justify-center h-dvh min-h-0 overflow-hidden md:h-auto md:min-h-screen md:overflow-visible px-4 md:px-8"
     >
       {children}
     </section>

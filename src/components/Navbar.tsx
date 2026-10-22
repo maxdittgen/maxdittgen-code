@@ -9,23 +9,23 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
     console.log('Navbar active:', active);
 
     return(
-    <nav className="fixed top-0 left-0 w-full flex flex-col bg-transparent z-30 py-4">
+    <nav className="fixed top-0 left-0 w-full flex flex-col bg-[#fffefc] md:bg-transparent z-30 py-2 md:py-4">
         {/* Logo (full-width wrapper) */}
-        <div className="w-full flex justify-center py-4">
+        <div className="w-full flex justify-center py-2 md:py-4">
         <a href="#hero">
             <img
             src={Logo}
             alt="Max Dittgen Logo"
-            className="w-55 h-auto md:w-70"
+            className="w-40 h-auto md:w-70"
             />
         </a>
         </div>
         {/* Links */}
-        <ul className="w-full max-w-4xl mx-auto flex justify-around pb-4">
+        <ul className="w-full max-w-4xl mx-auto flex justify-around px-6 md:px-0 pb-2 md:pb-4">
         <li>
             <a
             href="#about"
-            className={`nav-link ${active === 'about' ? 'font-bold' : 'font-normal'}`}
+            className={`nav-link text-[15px] md:text-xl ${active === 'about' ? 'font-bold' : 'font-normal'}`}
             >
             About
             </a>
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
         <li>
             <a
             href="#research"
-            className={`nav-link ${active === 'research' ? 'font-bold' : 'font-normal'}`}
+            className={`nav-link text-[15px] md:text-xl ${active === 'research' ? 'font-bold' : 'font-normal'}`}
             >
             Research
             </a>
@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
         <li>
             <a
             href="#projects"
-            className={`nav-link ${active === 'projects' ? 'font-bold' : 'font-normal'}`}
+            className={`nav-link text-[15px] md:text-xl ${active === 'projects' ? 'font-bold' : 'font-normal'}`}
             >
             Projects
             </a>
@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
         <li>
             <a
             href="#experience"
-            className={`nav-link ${active === 'experience' ? 'font-bold' : 'font-normal'}`}
+            className={`nav-link text-[15px] md:text-xl ${active === 'experience' ? 'font-bold' : 'font-normal'}`}
             >
             Experience
             </a>
@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ active }) => {
         <li>
             <a
             href="#links"
-            className={`nav-link ${active === 'links' ? 'font-bold' : 'font-normal'}`}
+            className={`nav-link text-[15px] md:text-xl ${active === 'links' ? 'font-bold' : 'font-normal'}`}
             >
             Links
             </a>

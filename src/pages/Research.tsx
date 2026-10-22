@@ -121,12 +121,12 @@ const Research: React.FC = () => {
   }, [])
 
   return (
-    <section id="research" className="relative w-full min-h-screen bg-[#fffefc] pt-42">
-      <div className="mx-auto px-8 max-w-6xl w-full h-[calc(100vh-14rem)] relative">
+    <section id="research" className="relative w-full h-full flex flex-col md:h-auto md:block md:min-h-screen bg-[#fffefc] pt-28 pb-14 md:pt-42 md:pb-0">
+      <div className="mx-auto md:px-8 max-w-6xl w-full flex-1 min-h-0 md:h-[calc(100vh-14rem)] relative">
         <div
           ref={scrollRef}
           onScroll={evaluateScrollState}
-          className="overflow-y-auto h-full pr-8 pl-8 pt-4 pb-16"
+          className="overflow-y-auto overscroll-y-contain md:overscroll-y-auto h-full md:pr-8 md:pl-8 pt-4 pb-16"
         >
           {/* Research Experience */}
           <h2 className="text-2xl font-bold mb-4">Research Experience</h2>
@@ -141,18 +141,18 @@ const Research: React.FC = () => {
                 <img
                   src={item.thumbnail}
                   alt={`${item.title} thumbnail`}
-                  className="w-20 h-20 object-cover flex-shrink-0 self-center"
+                  className="w-16 h-16 md:w-20 md:h-20 object-cover flex-shrink-0 self-center"
                 />
 
                 {/* Content */}
-                <div className="flex-grow p-4">
-                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
+                <div className="flex-grow p-3 md:p-4">
+                  <h3 className="text-lg md:text-xl font-semibold mb-1">{item.title}</h3>
                   <p className="text-base italic mb-1">{item.subtitle}</p>
                   <p className="text-base">{item.details}</p>
 
                   {/* Hidden Learn more link */}
                   {item.moreInfoLink && (
-                    <div className="overflow-hidden max-h-0 group-hover:max-h-32 transition-[max-height] duration-300">
+                    <div className="overflow-hidden max-h-32 md:max-h-0 md:group-hover:max-h-32 transition-[max-height] duration-300">
                       <a
                         href={item.moreInfoLink}
                         className="block mt-2 font-bold underline"
@@ -180,7 +180,7 @@ const Research: React.FC = () => {
                 className="group transform-gpu hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => item.link && window.open(item.link, '_blank')}
               >
-                <h3 className="text-xl font-semibold leading-tight mb-1">
+                <h3 className="text-lg md:text-xl font-semibold leading-tight mb-1">
                   {item.title}
                 </h3>
                 <p className="text-base italic mb-1">{item.subtitle}</p>
@@ -198,7 +198,7 @@ const Research: React.FC = () => {
                 className="group transform-gpu hover:scale-105 transition-transform cursor-pointer"
                 onClick={() => item.link && window.open(item.link, '_blank')}
               >
-                <h3 className="text-xl font-semibold leading-tight mb-1">
+                <h3 className="text-lg md:text-xl font-semibold leading-tight mb-1">
                   {item.title}
                 </h3>
                 <p className="text-base italic mb-1">{item.subtitle}</p>
@@ -220,7 +220,7 @@ const Research: React.FC = () => {
           <a
             href="#projects"
             aria-label="Scroll to Projects"
-            className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
+            className="hidden md:block absolute bottom-2 left-1/2 transform -translate-x-1/2"
           >
             <img src={ArrowDown} alt="Scroll down" className="w-8 h-10 animate-bounce" />
           </a>

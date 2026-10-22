@@ -5,7 +5,7 @@ import ArrowUp from '../assets/double_up.svg'
 const Links: React.FC = () => (
   <section
     id="links"
-    className="relative w-full min-h-screen bg-[#fffefc] pt-32 flex flex-col items-center"
+    className="relative w-full h-full min-h-0 md:h-auto md:min-h-screen bg-[#fffefc] pt-28 md:pt-32 flex flex-col items-center"
   >
     {/* Centered list of links */}
     <div className="flex-1 flex flex-col justify-center space-y-12">

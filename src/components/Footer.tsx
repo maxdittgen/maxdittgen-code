@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaFile, FaEnvelope } from 'react-icons/fa';
 
 const Footer: React.FC = () => (
-  <footer className="fixed bottom-0 left-0 w-full bg-transparent z-30 flex justify-center space-x-4 p-4">
+  <footer className="fixed bottom-0 left-0 w-full bg-[#fffefc] md:bg-transparent z-30 flex justify-center space-x-4 p-3 md:p-4">
     <a href="mailto:myd4@cornell.edu" aria-label="Email Me">
       <FaEnvelope size={24} />
     </a>

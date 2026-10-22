@@ -72,13 +72,13 @@ const experiences: ExpItem[] = [
 const Experience: React.FC = () => (
   <section
     id="experience"
-    className="relative w-full min-h-screen bg-[#fffefc] pt-45 md:pt-45"
+    className="relative w-full h-full flex flex-col md:h-auto md:block md:min-h-screen bg-[#fffefc] pt-28 pb-14 md:pt-45 md:pb-0"
   >
     {/* Centered container */}
-    <div className="mx-auto px-8 max-w-5xl w-full h-[calc(100vh-14rem)] relative">
-      <h2 className="text-2xl font-bold mb-2 ml-7">Places I've worked</h2>
+    <div className="mx-auto md:px-8 max-w-5xl w-full flex-1 min-h-0 flex flex-col md:block md:h-[calc(100vh-14rem)] relative">
+      <h2 className="text-2xl font-bold mb-2 md:ml-7">Places I've worked</h2>
       {/* Scrollable list with padding for hover effects */}
-      <ul className="overflow-y-auto h-full pr-8 pb-16 space-y-4 pt-4 pl-4">
+      <ul className="flex-1 min-h-0 overflow-y-auto overscroll-y-contain md:overscroll-y-auto md:h-full md:pr-8 pb-16 space-y-4 pt-4 md:pl-4">
         {experiences.map((exp, i) => (
           <li
             key={i}
@@ -89,7 +89,7 @@ const Experience: React.FC = () => (
               <img
                 src={exp.logo}
                 alt={`${exp.company} logo`}
-                className="w-20 h-20 object-contain"
+                className="w-16 h-16 md:w-20 md:h-20 object-contain"
               />
             </div>
 
@@ -113,7 +113,7 @@ const Experience: React.FC = () => (
     <a
       href="#links"
       aria-label="Scroll to Link"
-      className="absolute bottom-24 left-1/2 transform -translate-x-1/2"
+      className="hidden md:block absolute bottom-24 left-1/2 transform -translate-x-1/2"
     >
       <img
         src={ArrowDown}

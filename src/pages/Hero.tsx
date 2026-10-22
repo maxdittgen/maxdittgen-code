@@ -4,11 +4,17 @@ import ProfilePic from '../assets/profilepic.jpg'
 import ArrowDown from '../assets/arrow-down.svg'
 
 const Hero: React.FC = () => {
-  const [imageHeight, setImageHeight] = useState(478);
+  const [imageHeight, setImageHeight] = useState<number | undefined>(478);
   
   // Adjust image height based on viewport height
   useEffect(() => {
     const handleResize = () => {
+      // On mobile, the image is sized by CSS instead
+      if (!window.matchMedia('(min-width: 768px)').matches) {
+        setImageHeight(undefined);
+        return;
+      }
+
       // Calculate available height (viewport height minus navbar height at 42px and footer at 12px)
       const availableHeight = window.innerHeight - 42;
       
@@ -27,23 +33,23 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen bg-[#fffefc] flex flex-col items-center justify-center pt-42 pb-28 overflow-hidden"
+      className="relative w-full h-full min-h-0 md:h-auto md:min-h-screen bg-[#fffefc] flex flex-col items-center justify-center pt-24 pb-14 md:pt-42 md:pb-28 overflow-hidden"
     >
       {/* Main content grid, slightly narrower than full width */}
-      <div className="mx-auto px-8 grid grid-cols-2 items-center gap-12 max-w-4xl w-full">
+      <div className="mx-auto md:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 max-w-4xl w-full">
         {/* Left: profile image with dynamically adjusted height */}
         <img
           src={ProfilePic}
           alt="Max Dittgen portrait"
-          className="w-[400px] rounded-xl shadow-lg object-cover"
-          style={{ height: `${imageHeight}px` }}
+          className="w-full max-w-[240px] aspect-[400/478] mx-auto md:mx-0 md:max-w-full md:aspect-auto md:w-[400px] rounded-xl shadow-lg object-cover"
+          style={imageHeight ? { height: `${imageHeight}px` } : undefined}
         />
 
         {/* Right: heading and intro text, slightly smaller type */}
-        <div className="flex flex-col items-start">
-          <h1 className="hero-title text-5xl mb-4">Hi, I'm Max!</h1>
-          <p className="text-xl font-medium max-w-lg leading-relaxed">
-            I'm a recent Cornell University B.S. and M.Eng.graduate excited about
+        <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <h1 className="hero-title text-4xl md:text-5xl mb-4">Hi, I'm Max!</h1>
+          <p className="text-lg md:text-xl font-medium max-w-lg leading-relaxed">
+            I'm a recent Cornell University B.S. and M.Eng. graduate excited about
             the confluence of technology, development and cultures.
           </p>
         </div>
@@ -53,7 +59,7 @@ const Hero: React.FC = () => {
       <a
         href="#about"
         aria-label="Scroll to About"
-        className="absolute bottom-16 left-1/2 transform -translate-x-1/2"
+        className="hidden md:block absolute bottom-16 left-1/2 transform -translate-x-1/2"
       >
         <img
           src={ArrowDown}

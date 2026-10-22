@@ -99,17 +99,18 @@ const Projects: React.FC = () => {
   }, [])
 
   return (
-    <section id="projects" className="relative w-full min-h-screen bg-[#fffefc]">
+    <section id="projects" className="relative w-full h-full flex flex-col md:h-auto md:block md:min-h-screen bg-[#fffefc] pt-28 pb-14 md:pt-0 md:pb-0">
       {/* Fixed header space */}
-      <div className="h-40 w-full" />
+      <div className="hidden md:block h-40 w-full" />
 
       {/* Scrollable projects container */}
-      <div className="mx-auto px-8 max-w-6xl w-full h-[calc(100vh-12rem)] relative">
+      <div className="mx-auto md:px-8 max-w-6xl w-full flex-1 min-h-0 md:h-[calc(100vh-12rem)] relative">
         <div
           ref={scrollRef}
           onScroll={evaluateScrollState}
-          className="h-full overflow-y-auto pr-8 pl-4 pt-4 pb-16"
+          className="h-full overflow-y-auto overscroll-y-contain md:overscroll-y-auto md:pr-8 md:pl-4 pt-4 pb-16"
         >
+          <h2 className="text-2xl font-bold mb-4">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((proj, idx) => (
               <div
@@ -202,7 +203,7 @@ const Projects: React.FC = () => {
           <a
             href="#experience"
             aria-label="Scroll to Experience"
-            className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
+            className="hidden md:block absolute bottom-4 left-1/2 transform -translate-x-1/2"
           >
             <img src={ArrowDown} alt="Scroll down" className="w-8 h-10 animate-bounce" />
           </a>
