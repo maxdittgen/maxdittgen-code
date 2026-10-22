@@ -4,6 +4,7 @@ import ForetImg from '../assets/foretimg.png'
 import RondoImg from '../assets/rondoimg.jpg'
 import ForecastImg from '../assets/forecastimg.jpg'
 import AbroadImg from '../assets/abroadimg.png'
+import BurstDenoisingImg from '../assets/burstdenoising.png'
 import ArrowDown from '../assets/arrow-down.svg'
 
 interface Project {
@@ -12,11 +13,21 @@ interface Project {
   description: string
   image: string
   githubLink?: string
+  videoLink?: string
   secondaryLink?: string
-  secondaryLinkType: 'devpost' | 'presentation'
+  secondaryLinkType: 'devpost' | 'presentation' | 'paper'
 }
 
 const projects: Project[] = [
+  {
+    title: 'Saliency‑Guided Burst Denoising',
+    subtitle: 'Low‑light photography, similar to iPhone Night Mode',
+    description: 'Corner detection, homography alignment, bilateral filtering, and saliency‑guided burst fusion pipeline in C++ for Prof. Abe Davis\'s Computing for Content Creation graduate seminar',
+    image: BurstDenoisingImg,
+    videoLink: 'https://youtu.be/4jWeukLGE_w',
+    secondaryLink: '/docs/BurstDenoising.pdf',
+    secondaryLinkType: 'paper'
+  },
   {
     title: 'Foret',
     subtitle: 'Y Combinator Best Hack Award at HackMIT 2023',
@@ -131,6 +142,7 @@ const Projects: React.FC = () => {
                   onClick={() => setActiveProjectIndex(null)}
                 >
                   <div className="flex w-full h-full">
+                    {proj.githubLink && (
                     <a
                       href={proj.githubLink}
                       className="flex-1 flex items-center justify-center text-white text-xl font-medium hover:bg-opacity-50 hover:bg-gray-700 transition-colors"
@@ -141,6 +153,20 @@ const Projects: React.FC = () => {
                     >
                       GitHub
                     </a>
+                    )}
+
+                    {proj.videoLink && (
+                    <a
+                      href={proj.videoLink}
+                      className="flex-1 flex items-center justify-center text-white text-xl font-medium hover:bg-opacity-50 hover:bg-gray-700 transition-colors"
+                      onClick={e => {
+                        e.stopPropagation()
+                        window.open(proj.videoLink, '_blank')
+                      }}
+                    >
+                      Video
+                    </a>
+                    )}
 
                     <a
                       href={proj.secondaryLink}
@@ -152,7 +178,9 @@ const Projects: React.FC = () => {
                     >
                       {proj.secondaryLinkType === 'devpost'
                         ? 'Devpost'
-                        : 'Presentation'}
+                        : proj.secondaryLinkType === 'paper'
+                          ? 'Paper'
+                          : 'Presentation'}
                     </a>
                   </div>
                 </div>

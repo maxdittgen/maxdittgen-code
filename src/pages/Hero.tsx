@@ -43,8 +43,8 @@ const Hero: React.FC = () => {
         <div className="flex flex-col items-start">
           <h1 className="hero-title text-5xl mb-4">Hi, I'm Max!</h1>
           <p className="text-xl font-medium max-w-lg leading-relaxed">
-            I'm currently a computer science student at Cornell University studying
-            the confluence of technology, development and finance.
+            I'm a recent Cornell University B.S. and M.Eng.graduate excited about
+            the confluence of technology, development and cultures.
           </p>
         </div>
       </div>

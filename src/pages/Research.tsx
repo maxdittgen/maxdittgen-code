@@ -20,26 +20,26 @@ interface ResearchItem {
 // =======================
 const researchExperiences: ResearchItem[] = [
   {
-    thumbnail: UtechImg,
-    title: 'Urban Technology Lab (uTECH) - Cornell University',
-    subtitle: 'Jan 2025 – Present',
-    details: 'Pollution exposure aware path‑planning algorithm development for navigation apps',
-    link: 'https://urban.tech.cornell.edu',
-    moreInfoLink: 'https://drive.google.com/file/d/1jnp2VC_STcm6XjZ8A3j0COlxFfMmwIXj/view?usp=sharing'
-  },
-  {
     thumbnail: CommentImg,
     title: 'Computing for Global Development Lab - Cornell University',
-    subtitle: 'Jan 2024 – Dec 2024',
-    details: 'UI development for collaborative Human‑AI tool for writing constructive Reddit comments',
+    subtitle: '2024 – Present',
+    details: 'Advised by Aditya Vashistha -- Culture-aligning LLM writing assistants to improve constructive deliberation and conversational outcomes on divisive topics',
     link: 'https://www.adityavashistha.com/people.html',
     moreInfoLink: 'https://arxiv.org/pdf/2411.03295'
   },
   {
+    thumbnail: UtechImg,
+    title: 'Urban Technology Lab (uTECH) - Cornell University',
+    subtitle: '2025',
+    details: 'Advised by H. Oliver Gao -- Smart navigation algorithms to maximize commuter speed while minimizing pollution exposure',
+    link: 'https://urban.tech.cornell.edu',
+    moreInfoLink: 'https://drive.google.com/file/d/1jnp2VC_STcm6XjZ8A3j0COlxFfMmwIXj/view?usp=sharing'
+  },
+  {
     thumbnail: MicrofaasImg,
     title: 'Performance‑and‑Energy Aware Computing Lab (PeacLab) - Boston University',
-    subtitle: 'Summer 2023',
-    details: 'Linux Kernel testing for efficient and scalable cloud solution built on bare‑metal microcontroller clusters',
+    subtitle: '2022',
+    details: 'Advised by Ayse Coskun -- Performance and power benchmarking and kernel optimization for MicroFaaS, a bare‑metal microcontroller cluster 5.6x more energy‑efficient than conventional cloud servers',
     link: 'https://peaclab.bu.edu',
     moreInfoLink: 'https://www.bu.edu/peaclab/files/2022/02/MicroFaaS-DATE22.pdf'
   },
@@ -47,7 +47,7 @@ const researchExperiences: ResearchItem[] = [
     thumbnail: TroyanskayaImg,
     title: 'Troyanskaya Lab - Princeton University',
     subtitle: 'Jan 2021 – May 2021',
-    details: 'Computational gene expression analysis for determining developmental diseases modelable by synthetic brain organoids',
+    details: 'Advised by Olga Troyanskaya -- Computational gene expression analysis for determining developmental diseases modelable by synthetic brain organoids',
     link: 'https://molbio.princeton.edu/troyanskaya-lab',
     moreInfoLink: '#'
   }
@@ -58,16 +58,44 @@ const researchExperiences: ResearchItem[] = [
 // =======================
 const publications: ResearchItem[] = [
   {
+    title: 'Value‑Aligned LLMs Improve Conversational Outcomes on Divisive Topics',
+    subtitle: 'Farhana Shahid, Maximilian Dittgen, Stella Zhang, Aditya Vashistha — CHI \'27 (Under Review)',
+    details: 'Evaluating how LLM writing assistants that preserve users\' values and stances shape online conversations on divisive topics, across user studies with 1,028 participants in 3 countries.'
+  },
+  {
+    title: 'Shortest Path or Not? Modeling the Trade‑off Between Travel Time and Pollution',
+    subtitle: 'Cafer Avci, Zhaoyao Bao, Maximilian Dittgen, Danni Lu, Alireza Yazdiani, Mohammad Tayarani, H. Oliver Gao — Transportation Research Part D (Under Review)',
+    details: 'Multi‑objective routing that trades off commuter travel time against exposure to traffic‑related pollution, and the resulting health impacts.'
+  },
+  {
     title: 'Examining Human‑AI Collaboration for Co‑Writing Constructive Comments Online',
-    subtitle: 'Farhana Shahid, Maximilian Dittgen, Mor Naaman, Aditya Vashistha — CSCW \'25 (In Review)',
+    subtitle: 'Farhana Shahid, Maximilian Dittgen, Mor Naaman, Aditya Vashistha — CSCW \'25',
     details: 'Examining whether and how LLMs can facilitate humans in contributing constructive comments to divisive hot‑topic online discussions.',
     link: 'https://arxiv.org/pdf/2411.03295'
   },
   {
     title: 'Towards Swap‑Free, Continuous Ballooning for Fast, Cloud‑Based Virtual Machine Migrations',
-    subtitle: 'Kevin Alarcón Negy, Tycho Nightingale, Hakim Weatherspoon, Zhiming Shen (Acknowledged Contributor) — ACM \'24',
+    subtitle: 'Kevin Alarcón Negy, Tycho Nightingale, Hakim Weatherspoon, Zhiming Shen (Acknowledged Contributor) — SoCC \'24',
     details: 'Continuous memory ballooning in the Xen hypervisor as a means to speed live virtual machine migrations.',
     link: 'https://dl.acm.org/doi/pdf/10.1145/3698038.3698543'
+  }
+]
+
+// =======================
+// Selected Writing
+// =======================
+const writing: ResearchItem[] = [
+  {
+    title: 'Evaluating Anticolonial Resistance Methods Against the Digital Platform Metropole',
+    subtitle: 'Seminar paper for INFO 6210: Information, Technology, and Society — 2026',
+    details: 'Applying data and digital colonialism to the relationship between technology platforms and their users, and evaluating which historical anticolonial resistance methods carry over.',
+    link: '/docs/PlatformColonialism.pdf'
+  },
+  {
+    title: 'Ethical Considerations in the Development of Low‑Resource African Language LLMs',
+    subtitle: 'Course paper for INFO 4505: Computing for Global Development — 2024',
+    details: 'How researchers can ethically develop NLP models for the data‑scarce, underrepresented languages of Sub‑Saharan Africa.',
+    link: '/docs/LowResourceLLMs.pdf'
   }
 ]
 
@@ -147,6 +175,24 @@ const Research: React.FC = () => {
           <h2 className="mt-8 text-2xl font-bold mb-4">Publications / Acknowledgements</h2>
           <ul className="space-y-4">
             {publications.map((item, idx) => (
+              <li
+                key={idx}
+                className="group transform-gpu hover:scale-105 transition-transform cursor-pointer"
+                onClick={() => item.link && window.open(item.link, '_blank')}
+              >
+                <h3 className="text-xl font-semibold leading-tight mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-base italic mb-1">{item.subtitle}</p>
+                <p className="text-base">{item.details}</p>
+              </li>
+            ))}
+          </ul>
+
+          {/* Selected Writing */}
+          <h2 className="mt-8 text-2xl font-bold mb-4">Selected Writing</h2>
+          <ul className="space-y-4">
+            {writing.map((item, idx) => (
               <li
                 key={idx}
                 className="group transform-gpu hover:scale-105 transition-transform cursor-pointer"

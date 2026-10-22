@@ -12,8 +12,16 @@ const Footer: React.FC = () => (
     <a href="https://linkedin.com/in/mdittgen" aria-label="LinkedIn">
       <FaLinkedin size={24} />
     </a>
+    <a
+      href="/docs/Maximilian_Dittgen_CV.pdf"
+      download="Maximilian_Dittgen_CV.pdf"
+      aria-label="CV"
+      className="w-6 h-6 flex items-center justify-center text-base font-bold leading-none"
+    >
+      CV
+    </a>
     <a 
-      href="src/assets/Maximilian Dittgen Resume.pdf" 
+      href="/docs/Resume.pdf" 
       download="Maximilian Dittgen Resume.pdf" 
       aria-label="Resume"
     >

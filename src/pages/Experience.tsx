@@ -4,6 +4,8 @@ import CapitalOneLogo from '../assets/capitalone-logo.png'
 import ExostellarLogo from '../assets/exostellar-logo.png'
 import CornellLogo from '../assets/cornell-logo.png'
 import LumosLogo from '../assets/lumos-logo.png'
+import AppleLogo from '../assets/apple-logo.png'
+import AwsLogo from '../assets/aws-logo.png'
 import ArrowDown from '../assets/arrow-down.svg'
 
 interface ExpItem {
@@ -17,29 +19,45 @@ interface ExpItem {
 
 const experiences: ExpItem[] = [
   {
+    logo: AppleLogo,
+    company: 'Apple',
+    role: 'Software Engineer',
+    date: '2026 – Present',
+    details: 'Developing compute control plane for Apple Cloud Elastic Compute',
+  },
+  {
+    logo: AwsLogo,
+    company: 'Amazon Web Services (AWS)',
+    role: 'Software Development Intern, EC2 Kernel/Hypervisor',
+    date: 'Fall 2025',
+    details:
+      'Hardware‑accelerated interrupt injection for the EC2 Nitro Hypervisor on ARM; authored a Linux kernel RFC patch series and had three KVM patches merged into mainline Linux',
+    tech: 'C, Linux Kernel, KVM, QEMU',
+  },
+  {
     logo: CapitalOneLogo,
     company: 'Capital One',
     role: 'Software Engineering Intern',
-    date: 'Summer 2024',
-    details: 'Data pipelining for Zelle Peer‑to‑Peer Payments',
-    tech: 'Java, Snowflake, Springboot',
+    date: 'Summers 2024 & 2025',
+    details: 'Data pipelines and APIs for Capital One Travel and Zelle peer‑to‑peer payments',
+    tech: 'TypeScript, Java, AWS, Snowflake, Spring Boot',
   },
   {
     logo: ExostellarLogo,
-    company: 'Exostellar (Series A)',
+    company: 'Exostellar (acquired by Qualcomm)',
     role: 'Software Engineering Intern',
     date: 'Summer 2023',
     details:
-      'Memory allocation/deallocation to containerized applications on AWS VMs',
-    tech: 'Linux Kernel, Xen Hypervisor, C',
+      'VM live migration optimizations in the Xen hypervisor, acknowledged in a SoCC \'24 publication',
+    tech: 'Linux Kernel, Xen Hypervisor, C, Go',
   },
   {
     logo: CornellLogo,
     company: 'Cornell University',
-    role: 'Teaching Assistant / Course Staff',
-    date: 'Jan 2024 – Present',
+    role: 'Graduate Teaching Assistant / Teaching Assistant',
+    date: 'Jan 2024 – May 2026',
     details:
-      'Host office hours and grade coursework for CS 4852: Networks II and CS 4300: Language & Information',
+      'Coordinated course operations between the professor and a team of 30 undergraduate TAs for CS 4300: Language & Information, and taught a NumPy workshop; previously a TA for CS 4300 and CS 4852: Markets II. Outstanding Graduate Teaching Assistant Award, 2026',
   },
   {
     logo: LumosLogo,
@@ -47,7 +65,7 @@ const experiences: ExpItem[] = [
     role: 'Program Director',
     date: 'July 2020 – May 2024',
     details:
-      'Develop debate curriculum and manage K‑12 after‑school program for over 740 students worldwide',
+      'Developed debate curriculum and managed K‑12 after‑school program for over 740 students worldwide',
   },
 ]
 
